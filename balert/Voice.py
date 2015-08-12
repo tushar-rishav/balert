@@ -7,7 +7,7 @@ class voice:
 		self.engine = pyttsx.init()
 		self.rate = _
 		self.engine.setProperty('rate', self.rate)
-		self.msg = "Low Battery!"
+		self.msg = ""
 	
 	def set_rate(self,rate):
 		self.engine.setProperty('rate', rate)
