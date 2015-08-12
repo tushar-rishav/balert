@@ -1,10 +1,12 @@
-import os
 from Bsettings import bpath,SetLevel
+import logging,os
+
 
 class battery(bpath):
 	"""
 		Module to fetch battery status
 	"""
+	
 	sl = None
 	def __init__(self):
 		if not os.access(bpath.POWER_SUPPLY_PATH, os.R_OK):
@@ -17,12 +19,12 @@ class battery(bpath):
 			return online_file.readline().strip() == '1'
 	def power_source_type(self,supply_path):
 		with open(os.path.join(supply_path, 'type'), 'r') as type_file:
-			type = type_file.readline().strip()
-			if type == 'Mains':
+			_type = type_file.readline().strip()
+			if _type == 'Mains':
 				return "Mains"
-			elif type == 'UPS':
+			elif _type == 'UPS':
 				return "UPS"
-			elif type == 'Battery':
+			elif _type == 'Battery':
 				return "Battery"
 			else:
 				raise RuntimeError("Type of {path} ({type}) is not supported".format(path=supply_path, type=type))
@@ -43,23 +45,24 @@ class battery(bpath):
 		for supply in os.listdir(bpath.POWER_SUPPLY_PATH):
 			supply_path = os.path.join(bpath.POWER_SUPPLY_PATH, supply)
 			try:
-				type = self.power_source_type(supply_path)
-				if type == "Mains":
+				_type = self.power_source_type(supply_path)
+				if _type == "Mains":
 					if self.is_ac_online(supply_path):
 						pass
-				elif type == "Battery":
+				elif _type == "Battery":
 					if self.is_battery_present(supply_path) and self.is_battery_discharging(supply_path):
-						capacity = self.get_battery_state(supply_path)
-						
+						capacity = int(self.get_battery_state(supply_path))
 				else:
 					pass
 			except Exception as e:
 				print e
 
 		try:
-			if int(capacity) <= self.sl.CHARGE:
+			logging.getLogger().setLevel(logging.DEBUG)
+			logging.debug("Capacity %d, self.sl.Charge %d",capacity, self.sl.CHARGE)
+			if capacity <= self.sl.CHARGE:
 				return (1,capacity)
 			else:
-				return (0,None)
+				return (0,capacity)
 		except ZeroDivisionError as e:
 			print e
