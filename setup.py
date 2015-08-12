@@ -15,7 +15,7 @@ setup(name='Balert',
           r for r in open('requirements.txt', 'r').read().split('\n') if r],
       author='Tushar Gautam',
       author_email='tushar.rishav@gmail.com',
-      packages=['balert',],
+      packages=['balert', ],
       entry_points={
           'console_scripts': ['balert=balert:main'],
       },
