@@ -7,12 +7,12 @@ class battery(bpath):
 		Module to fetch battery status
 	"""
 	
-	sl = None
 	def __init__(self):
 		if not os.access(bpath.POWER_SUPPLY_PATH, os.R_OK):
 			raise RuntimeError("Unable to read {path}.".format(path = bpath.POWER_SUPPLY_PATH))
 		else:
 			logging.debug("All ok!")
+			self.charging=False
 			
 
 	def is_ac_online(self,supply_path):
@@ -53,17 +53,21 @@ class battery(bpath):
 				elif _type == "Battery":
 					if self.is_battery_present(supply_path) and self.is_battery_discharging(supply_path):
 						capacity = int(self.get_battery_state(supply_path))
-				else:
-					pass
+					else:
+						self.charging = True
+					
 			except Exception as e:
 				print e
 
 		try:
 			logging.getLogger().setLevel(logging.DEBUG)
-			logging.debug("Capacity %d, self.sl.Charge %d",capacity, SetLevel.CHARGE)
-			if capacity <= SetLevel.CHARGE:
-				return (1,capacity)
+			if not self.charging:
+				logging.debug("Capacity %d, self.sl.Charge %d",capacity, SetLevel.CHARGE)
+				if capacity <= SetLevel.CHARGE:
+					return (1,capacity)
+				else:
+					return (0,capacity)
 			else:
-				return (0,capacity)
+				return (0,0)
 		except ZeroDivisionError as e:
 			print e
