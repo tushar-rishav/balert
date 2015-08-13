@@ -12,8 +12,9 @@ class battery(bpath):
 		if not os.access(bpath.POWER_SUPPLY_PATH, os.R_OK):
 			raise RuntimeError("Unable to read {path}.".format(path = bpath.POWER_SUPPLY_PATH))
 		else:
-			self.sl = SetLevel()
-			print "All ok!"
+			logging.debug("All ok!")
+			
+
 	def is_ac_online(self,supply_path):
 		with open(os.path.join(supply_path, 'online'), 'r') as online_file:
 			return online_file.readline().strip() == '1'
@@ -59,8 +60,8 @@ class battery(bpath):
 
 		try:
 			logging.getLogger().setLevel(logging.DEBUG)
-			logging.debug("Capacity %d, self.sl.Charge %d",capacity, self.sl.CHARGE)
-			if capacity <= self.sl.CHARGE:
+			logging.debug("Capacity %d, self.sl.Charge %d",capacity, SetLevel.CHARGE)
+			if capacity <= SetLevel.CHARGE:
 				return (1,capacity)
 			else:
 				return (0,capacity)
