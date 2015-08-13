@@ -48,10 +48,12 @@ def main():
     _ = __.get_low_battery_warning_level()
     logging.getLogger().setLevel(logging.DEBUG)
     logging.debug(_)
-    if _[0] == 0:
+    if _[0] == 0 and _[1]:
         al.msg+="All cool! %d Percent remaining" %_[1]
-    if _[0] == 1:
+    elif _[0] == 1:
         al.msg+="Low Battery! %d Percent remaining" %_[1]
+    else:
+        al.msg+=" Battrey is Charging!"
     print al.msg
     al.speak()
 
