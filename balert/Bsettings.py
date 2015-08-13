@@ -4,11 +4,9 @@ class bpath:
         pass
 
 class SetLevel:
-    TIME = 10
     CHARGE = 20
     def __init__(self):
         pass
     def time(self,time):
         self.TIME = time
-    def charge(self,charge):
-        self.CHARGE = charge
+    
