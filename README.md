@@ -36,7 +36,7 @@ balert -c 30
 
 ```
 ### TO DO
-- Run the script periodically.
+- Add the script to cron
 - Add the script as startup application
 
 
