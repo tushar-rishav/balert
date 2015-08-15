@@ -10,7 +10,7 @@ Makes life simple! :wink:
 ```sh
 	python setup.py install
 ```
-After installation is done successfully, run any combinations of below command in your terminal once for initial setup and then we are done! If you want to use the default setup then just run  ```sh balert ``` in terminal. 
+After installation is done successfully, run any combinations of below command in your terminal once for initial setup and then we are done! If you want to use the default setup then just run  ``` balert ``` in terminal. 
 
 ### Usage
 
