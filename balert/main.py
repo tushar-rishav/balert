@@ -7,8 +7,30 @@ from Bsettings import bpath,SetLevel
 from Voice import voice
 from BatteryStatus import battery
 
-import argparse,logging
+import argparse,logging,subprocess
 
+def setupCron():
+    try:
+        location_f = subprocess.Popen("whereis balert", shell=True, stdout=subprocess.PIPE).stdout.read().strip().split(':')[1].strip()
+
+        cmd = subprocess.Popen("crontab -l", shell=True, stdout=subprocess.PIPE).stdout.read()
+        if not ('balert' in cmd): # handle multiple cronjob creation
+            cmd += "*/10 * * * * " + location_f + "\n"
+            
+            # temporary file. Will be deleted automatically.
+            tmp = open("/tmp/temp_cron.impossible", 'w')
+            tmp.write(cmd)
+            tmp.close()
+
+            subprocess.Popen("crontab /tmp/temp_cron.impossible", shell=True)
+
+            logging.info("Successfully set up the cron job.")
+        else:
+            pass
+
+    except:
+        logging.debug("Error writing the cron job.")
+        
 
 def main():
 
@@ -32,7 +54,7 @@ def main():
         pass
     
     al = voice()
-        
+
     if args.rate:
         al.set_rate(args.rate)
     elif args.vol:
@@ -52,11 +74,12 @@ def main():
         al.msg+="All cool! %d Percent remaining" %_[1]
     elif _[0] == 1:
         al.msg+="Low Battery! %d Percent remaining" %_[1]
+        print al.msg
+        al.speak()
     else:
         al.msg+=" Battrey is Charging!"
-    print al.msg
-    al.speak()
-
+    
+    setupCron()
 
 
 
