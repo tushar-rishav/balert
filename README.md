@@ -5,6 +5,13 @@ will say it clear and loud whenever your battery status goes below critical leve
 
 Makes life simple! :wink:
 
+### Installation
+
+```sh
+	python setup.py install
+```
+After installation is done successfully, run any combinations of below command in your terminal once for initial setup and then we are done! If you want to use the default setup then just run  ```sh balert ``` in terminal. 
+
 ### Usage
 
 ##### Set language
