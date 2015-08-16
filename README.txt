@@ -5,6 +5,18 @@ will say it clear and loud whenever your battery status goes below critical leve
 
 Makes life simple! :wink:
 
+### Installation
+
+```sh
+	python setup.py install
+```
+After installation is done successfully, run any combinations of below command in your terminal once for initial setup and then we are done! If you want to use the default setup then just run  ``` balert ``` in terminal. 
+
+#####Default config:
+	language: English
+	rate    : 100
+	charge  : 20
+
 ### Usage
 
 ##### Set language
@@ -36,7 +48,9 @@ balert -c 30
 
 ```
 ### TO DO
-- Add the script as startup application
+- [ ] Set and get the custom critical charge level from the environment.
+- [x] Add the script to crontab.
+- [ ] Add the script as startup application.
 
 
 ### License

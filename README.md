@@ -48,7 +48,9 @@ balert -c 30
 
 ```
 ### TO DO
-- Add the script as startup application
+- [ ] Set and get the custom critical charge level from the environment.
+- [x] Add the script to crontab.
+- [ ] Add the script as startup application.
 
 
 ### License
