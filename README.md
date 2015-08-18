@@ -49,6 +49,10 @@ If the battery level is below this critical level then it will give voice alert
 balert -c 30
 
 ```
+##### Get help
+```sh
+	balert -h
+```
 ##### Example
 ```sh
 	balert -m "Hey,Lazy dog " -c 25
