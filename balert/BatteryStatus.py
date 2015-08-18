@@ -1,8 +1,10 @@
 from Bsettings import bpath,SetLevel
+from Config import Config
 import logging,os
 
 
-class battery(bpath):
+
+class battery(bpath,Config):
 	"""
 		Module to fetch battery status
 	"""
@@ -61,9 +63,10 @@ class battery(bpath):
 
 		try:
 			logging.getLogger().setLevel(logging.DEBUG)
+			conf_charge = self.load_pickle()["CHARGE"]
 			if not self.charging:
-				logging.debug("Capacity %d, self.sl.Charge %d",capacity, SetLevel.CHARGE)
-				if capacity <= SetLevel.CHARGE:
+				logging.debug("Capacity %d, self.sl.Charge %d",capacity, conf_charge)
+				if capacity <= conf_charge:
 					return (1,capacity)
 				else:
 					return (0,capacity)
