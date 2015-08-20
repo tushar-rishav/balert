@@ -1,9 +1,16 @@
 ## Balert
 
-Balert is for all the lazy people (like me) who don't bother to check desktop notifications. Balert 
-will say clear and loud whenever your battery status goes below a critical level or the level decided by you! 
+Balert is for all the lazy people (like me :bowtie: ) who don't bother to check desktop notifications. Balert 
+will say it clear and loud whenever your battery status goes below a default critical level or the level decided by you! 
 
-Makes life simple! :wink:
+| Build Status |
+| ------------ |
+| [![Build Status](https://travis-ci.org/tushar-rishav/balert.svg?branch=master)](https://travis-ci.org/tushar-rishav/balert)|
+
+
+### [Demo](https://cloud.githubusercontent.com/assets/7397433/9386259/47f4991a-4778-11e5-9aaa-54873acf3d31.gif)
+![balert](https://cloud.githubusercontent.com/assets/7397433/9386259/47f4991a-4778-11e5-9aaa-54873acf3d31.gif)
+
 
 ### Installation
 
@@ -64,6 +71,8 @@ When you run the above code, you've set "Hey,Lazy dog" as your custom message an
 - [x] Add the script to crontab.
 - [ ] Add the script as startup application.
 
+### Contributions
+Have an idea to make it better? Go ahead! I will be happy to see a pull request from you! :blush:
 
 ### License
 ![gpl](https://cloud.githubusercontent.com/assets/7397433/9025904/67008062-3936-11e5-8803-e5b164a0dfc0.png)
