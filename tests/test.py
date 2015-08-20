@@ -5,10 +5,7 @@ class BalertTestCase(unittest2.TestCase):
     
     def run_balert(self):
     	balert_run = subprocess.Popen("balert", shell=True, stdout=subprocess.PIPE).stdout.read()
-    	cron_check = subprocess.Popen("crontab -l", shell=True, stdout=subprocess.PIPE).stdout.read()
-        print cron_check
-        print "balert" in cron_check
-        if "balert" in cron_check:
+    	if "Ok" in balert_run:
         	return True
         else:
         	return False
