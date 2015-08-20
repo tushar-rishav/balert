@@ -22,6 +22,7 @@ def setupCron():
             tmp.close()
             subprocess.Popen("crontab /tmp/temp_cron.impossible", shell=True)
             logging.info("Successfully set up the cron job.")
+            print "Ok"  # Do not remove this line ever!
                 
     except:
         logging.debug("Error writing the cron job.")
