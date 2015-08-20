@@ -1,9 +1,11 @@
 ## Balert
 
-Balert is for all the lazy people (like me) who don't bother to check desktop notifications. Balert 
-will say clear and loud whenever your battery status goes below a critical level or the level decided by you! 
+Balert is for all the lazy people (like me :bowtie: ) who don't bother to check desktop notifications. Balert 
+will say it clear and loud whenever your battery status goes below a default critical level or the level decided by you! 
 
-Makes life simple! :wink:
+### [Demo](https://cloud.githubusercontent.com/assets/7397433/9386259/47f4991a-4778-11e5-9aaa-54873acf3d31.gif)
+![balert](https://cloud.githubusercontent.com/assets/7397433/9386259/47f4991a-4778-11e5-9aaa-54873acf3d31.gif)
+
 
 ### Installation
 
