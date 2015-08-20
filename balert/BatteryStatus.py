@@ -17,7 +17,7 @@ class battery(bpath,Config):
 			self.charging=False
 			
 
-	def is_ac_online(self,supply_path):
+	def ac(self,supply_path):
 		with open(os.path.join(supply_path, 'online'), 'r') as online_file:
 			return online_file.readline().strip() == '1'
 	def power_source_type(self,supply_path):
@@ -31,15 +31,15 @@ class battery(bpath,Config):
 				return "Battery"
 			else:
 				raise RuntimeError("Type of {path} ({type}) is not supported".format(path=supply_path, type=type))
-	def is_battery_present(self,supply_path):
+	def battery_present(self,supply_path):
 		with open(os.path.join(supply_path, 'present'), 'r') as present_file:
 			return present_file.readline().strip() == '1'
 
-	def is_battery_discharging(self,supply_path):
+	def discharging(self,supply_path):
 		with open(os.path.join(supply_path, 'status'), 'r') as status_file:
 			return status_file.readline().strip() == 'Discharging'
 	
-	def get_battery_state(self,supply_path):
+	def state(self,supply_path):
 		with open(os.path.join(supply_path, 'capacity'), 'r') as capacity_file:
 			return capacity_file.readline().split()[0]
 
@@ -50,11 +50,11 @@ class battery(bpath,Config):
 			try:
 				_type = self.power_source_type(supply_path)
 				if _type == "Mains":
-					if self.is_ac_online(supply_path):
+					if self.ac(supply_path):
 						pass
 				elif _type == "Battery":
-					if self.is_battery_present(supply_path) and self.is_battery_discharging(supply_path):
-						capacity = int(self.get_battery_state(supply_path))
+					if self.battery_present(supply_path) and self.discharging(supply_path):
+						capacity = int(self.state(supply_path))
 					else:
 						self.charging = True
 					
