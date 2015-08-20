@@ -1,6 +1,6 @@
-import subprocess,unittest
+import subprocess,unittest2
 
-class BalertTestCase(unittest.TestCase):
+class BalertTestCase(unittest2.TestCase):
     """Tests for `balert/main.py`."""
     
     def run_balert(self):
@@ -17,4 +17,4 @@ class BalertTestCase(unittest.TestCase):
 		self.assertTrue(self.run_balert())
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest2.main()
