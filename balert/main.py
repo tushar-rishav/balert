@@ -14,16 +14,15 @@ else:
 def setupCron():
     try:
         location_f = subprocess.Popen("whereis balert", shell=True, stdout=subprocess.PIPE).stdout.read().strip().split(':')[1].strip()
-        print location_f
         cmd = subprocess.Popen("crontab -l", shell=True, stdout=subprocess.PIPE).stdout.read()
         if not ('balert' in cmd): # avoid multiple cronjob creation
-            cmd += "*/4 * * * * " + location_f + "\n"
+            cmd += "*/10 * * * * " + location_f + "\n"
             tmp = open("/tmp/temp_cron.impossible", 'w')
             tmp.write(cmd)
             tmp.close()
             subprocess.Popen("crontab /tmp/temp_cron.impossible", shell=True)
             logging.info("Successfully set up the cron job.")
-            
+                
     except:
         logging.debug("Error writing the cron job.")
 
