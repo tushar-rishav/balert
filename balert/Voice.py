@@ -2,7 +2,7 @@ from Config import Config
 import pyttsx
 
 
-class voice(Config):
+class Voice(Config):
     def __init__(self, _=120):
         self.engine = pyttsx.init()
         self.rate = _

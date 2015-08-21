@@ -1,6 +1,6 @@
 #! /usr/bin/python
 from sys import argv, exit, version_info
-from Voice import voice
+from Voice import Voice
 from BatteryStatus import Battery
 from Config import Config
 import argparse
@@ -77,7 +77,7 @@ def main():
     cf, cf_data = parse()
     if len(argv) == 1:
         pass
-    al = voice()
+    al = Voice()
     battery_instance = Battery()    # READ BATTERY
     charge_info = battery_instance.get_low_battery_warning_level()
     logging.debug(charge_info)
