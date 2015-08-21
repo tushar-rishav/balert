@@ -6,12 +6,6 @@ from Config import Config
 import argparse
 import logging
 import subprocess
-import os
-
-if version_info >= (3,):
-    import pickle
-else:
-    import cPickle as pickle
 
 
 def setupCron():
