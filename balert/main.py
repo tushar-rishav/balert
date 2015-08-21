@@ -1,8 +1,7 @@
 #! /usr/bin/python
 from sys import argv, exit, version_info
-from Bsettings import bpath, SetLevel
 from Voice import voice
-from BatteryStatus import battery
+from BatteryStatus import Battery
 from Config import Config
 import argparse
 import logging
@@ -67,7 +66,7 @@ def main():
         cf_data["CHARGE"] = args.charge
     cf.set_pickle(cf_data)
     # READ BATTERY
-    battery_instance = battery()
+    battery_instance = Battery()
     charge_info = battery_instance.get_low_battery_warning_level()
     logging.debug(charge_info)
     # OUTPUT
