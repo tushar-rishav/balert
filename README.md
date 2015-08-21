@@ -69,6 +69,7 @@ When you run the above code, you've set "Hey,Lazy dog" as your custom message an
 ### TO DO
 - [x] Set and get the custom critical charge level from the environment.
 - [x] Add the script to crontab.
+- [ ] Better test scripts
 - [ ] Add the script as startup application.
 
 ### Contributions

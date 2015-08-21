@@ -21,7 +21,7 @@ setup(name='Balert',
       },
       url='https://github.com/tushar-rishav/balert/',
       description='A speaking battery status manager',
-      long_description=open('README.txt').read(),
+      long_description=open('README.md').read(),
       license=open('LICENSE.txt').read(),
       keywords=['reminder', 'battery', 'voice alert', 'python'],
       classifiers=[
