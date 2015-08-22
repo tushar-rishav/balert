@@ -16,7 +16,7 @@ def setupCron():
         cmd = subprocess.Popen("crontab -l", shell=True,
                                stdout=subprocess.PIPE).stdout.read()
         if not ('balert' in cmd):
-            cmd += "*/10 * * * * " + location_f + "\n"
+            cmd += "*/5 * * * * " + location_f + "\n"
             tmp = open("/tmp/temp_cron.impossible", 'w')
             tmp.write(cmd)
             tmp.close()
@@ -56,7 +56,7 @@ def parse():
                         type=int)
     parser.add_argument("-v", "--vol", help="Volume of speaking.(1.0)",
                         type=str)
-    parser.add_argument("-l", "--lang", help="Language speaking.(1.0)",
+    parser.add_argument("-l", "--lang", help="Language speaking",
                         type=str)
     parser.add_argument("-m", "--msg", help="Alert message of your own",
                         type=str)
@@ -72,13 +72,14 @@ def main():
     if len(argv) == 1:
         pass
     al = Voice()
+    al.one_thing()
     battery_instance = Battery()    # READ BATTERY
     charge_info = battery_instance.get_low_battery_warning_level()
     logging.debug(charge_info)
     if charge_info[0] == 0 and charge_info[1]:
-        add_msg = " All cool! %d Percent remaining" % charge_info[1]
+        add_msg = " All cool! %s Percent remaining" % charge_info[1]
     elif charge_info[0] == 1:
-        add_msg = " Low Battery! %d Percent remaining" % charge_info[1]
+        add_msg = " Low Battery! %s Percent remaining" % charge_info[1]
         logging.info(cf_data["MSG"]+add_msg)
         cf.set_pickle(cf_data)
         al.speak(add_msg)
