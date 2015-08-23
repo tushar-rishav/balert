@@ -5,7 +5,7 @@ will say it clear and loud whenever your battery status goes below a default cri
 
 | Build Status | Version |
 | ------------ |---------|
-| [![Build Status](https://travis-ci.org/tushar-rishav/balert.svg?branch=master)](https://travis-ci.org/tushar-rishav/balert)|[![PyPI version](https://badge.fury.io/py/Balert.svg)](http://badge.fury.io/py/Balert)|
+| [![Build Status](https://travis-ci.org/tushar-rishav/balert.svg?branch=master)](https://travis-ci.org/tushar-rishav/balert)|[![PyPI version](https://badge.fury.io/py/balert.svg)](http://badge.fury.io/py/balert)|
 ### [Demo](https://cloud.githubusercontent.com/assets/7397433/9386259/47f4991a-4778-11e5-9aaa-54873acf3d31.gif)
 ![balert](https://cloud.githubusercontent.com/assets/7397433/9386259/47f4991a-4778-11e5-9aaa-54873acf3d31.gif)
 

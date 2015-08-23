@@ -118,6 +118,6 @@ License
    :alt: gpl
 .. _Demo: https://cloud.githubusercontent.com/assets/7397433/9386259/47f4991a-4778-11e5-9aaa-54873acf3d31.gif
 .. |Version|  image:: https://badge.fury.io/py/Balert.svg
-    :target:  http://badge.fury.io/py/Balert
+    :target: http://badge.fury.io/py/Balert
 .. |Build Status| image:: https://travis-ci.org/tushar-rishav/balert.svg?branch=master
    :target: https://travis-ci.org/tushar-rishav/balert
