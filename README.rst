@@ -28,7 +28,7 @@ Build from tar files
 
 .. code:: sh
 
-        wget "https://pypi.python.org/packages/source/B/Balert/Balert-1.0.4.tar.gz"
+        wget "https://pypi.python.org/packages/source/B/Balert/Balert-1.0.5.tar.gz"
         cd balert
         python setup.py install
 
