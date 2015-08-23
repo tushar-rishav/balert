@@ -14,12 +14,20 @@ will say it clear and loud whenever your battery status goes below a default cri
 
 ### Installation
 
+##### Build from tar files
 ```sh
+	wget "https://pypi.python.org/packages/source/B/Balert/Balert-1.0.4.tar.gz"
+	tar xzvf Balert-1.0.4.tar.gz
+	cd Balert-1.0.4
 	python setup.py install
+```
+##### Using pip
+```sh
+	pip install balert
 ```
 After installation is done successfully, run any combinations of below command in your terminal once for initial setup and then we are done! If you want to use the default setup then just run  ``` balert ``` in terminal. 
 
-#####Default config:
+###Default config:
 	language: English
 	rate    : 150
 	charge  : 20 (in percentage)

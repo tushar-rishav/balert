@@ -23,16 +23,28 @@ level decided by you!
 Installation
 ------------
 
+Build from tar files
+~~~~~~~~~~~~~~~~~
+
 .. code:: sh
 
+        git clone https://github.com/tushar-rishav/balert.git
+        cd balert
         python setup.py install
+
+Using pip
+~~~~~~~~~
+
+.. code:: sh
+
+        pip install balert
 
 After installation is done successfully, run any combinations of below
 command in your terminal once for initial setup and then we are done! If
 you want to use the default setup then just run ``balert`` in terminal.
 
 Default config:
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 ::
 
@@ -109,6 +121,7 @@ License
 .. figure:: https://cloud.githubusercontent.com/assets/7397433/9025904/67008062-3936-11e5-8803-e5b164a0dfc0.png
    :alt: gpl
 
+   gpl
 
 .. _Demo: https://cloud.githubusercontent.com/assets/7397433/9386259/47f4991a-4778-11e5-9aaa-54873acf3d31.gif
 
