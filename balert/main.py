@@ -16,7 +16,7 @@ def setupCron():
         cmd = subprocess.Popen("crontab -l", shell=True,
                                stdout=subprocess.PIPE).stdout.read()
         if not ('balert' in cmd):
-            cmd += "*/5 * * * * " + location_f + "\n"
+            cmd += "*/10 * * * * " + location_f + "\n"
             tmp = open("/tmp/temp_cron.impossible", 'w')
             tmp.write(cmd)
             tmp.close()
