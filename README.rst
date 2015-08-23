@@ -37,7 +37,7 @@ Using pip
 
 .. code:: sh
 
-        pip install balert
+        pip install Balert
 
 After installation is done successfully, run any combinations of below
 command in your terminal once for initial setup and then we are done! If
