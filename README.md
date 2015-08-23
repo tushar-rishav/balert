@@ -3,11 +3,9 @@
 Balert is for all the lazy people (like me :bowtie: ) who don't bother to check desktop notifications. Balert 
 will say it clear and loud whenever your battery status goes below a default critical level or the level decided by you! 
 
-| Build Status |
-| ------------ |
-| [![Build Status](https://travis-ci.org/tushar-rishav/balert.svg?branch=master)](https://travis-ci.org/tushar-rishav/balert)|
-
-
+| Build Status | Version |
+| ------------ |---------|
+| [![Build Status](https://travis-ci.org/tushar-rishav/balert.svg?branch=master)](https://travis-ci.org/tushar-rishav/balert)|[![PyPI version](https://badge.fury.io/py/Balert.svg)](http://badge.fury.io/py/Balert)|
 ### [Demo](https://cloud.githubusercontent.com/assets/7397433/9386259/47f4991a-4778-11e5-9aaa-54873acf3d31.gif)
 ![balert](https://cloud.githubusercontent.com/assets/7397433/9386259/47f4991a-4778-11e5-9aaa-54873acf3d31.gif)
 
@@ -16,7 +14,7 @@ will say it clear and loud whenever your battery status goes below a default cri
 
 ##### Build from tar files
 ```sh
-	wget "https://pypi.python.org/packages/source/B/Balert/Balert-1.0.4.tar.gz"
+	wget "https://pypi.python.org/packages/source/B/Balert/Balert-1.0.5.tar.gz"
 	tar xzvf Balert-1.0.4.tar.gz
 	cd Balert-1.0.4
 	python setup.py install

@@ -8,10 +8,10 @@ import sys
 extra = {}
 if sys.version_info >= (3,):
     extra['use_2to3'] = True
-requirement_list = [r.strip() for r in open('requirements.txt', 'r').readlines() if r]
 setup(name='Balert',
-      version='1.0.4',
-      install_requires=requirement_list,
+      version='1.0.5',
+      install_requires=[
+          r for r in open('requirements.txt', 'r').read().split('\n') if r],
       author='Tushar Gautam',
       author_email='tushar.rishav@gmail.com',
       packages=['balert', ],
