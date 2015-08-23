@@ -1,4 +1,4 @@
-## Balert
+## Balert :loudspeaker:
 
 Balert is for all the lazy people (like me :bowtie: ) who don't bother to check desktop notifications. Balert 
 will say it clear and loud whenever your battery status goes below a default critical level or the level decided by you! 
@@ -58,19 +58,13 @@ balert -c 30
 ```
 ##### Get help
 ```sh
-	balert -h
+balert -h
 ```
 ##### Example
 ```sh
-	balert -m "Hey,Lazy dog " -c 25
+balert -m "Hey,Lazy dog " -c 25
 ```
 When you run the above code, you've set "Hey,Lazy dog" as your custom message and 25 as your critical charge level.
-
-### TO DO
-- [x] Set and get the custom critical charge level from the environment.
-- [x] Add the script to crontab.
-- [ ] Better test scripts
-- [ ] Add the script as startup application.
 
 ### Contributions
 Have an idea to make it better? Go ahead! I will be happy to see a pull request from you! :blush:
