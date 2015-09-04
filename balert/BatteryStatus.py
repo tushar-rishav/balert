@@ -63,14 +63,14 @@ class Battery(Bpath, Config):
                         self.charging = True
 
             except Exception as e:
-                print e
+                print(e)
 
         try:
             logging.getLogger().setLevel(logging.DEBUG)
             conf_charge = self.load_pickle()["CHARGE"]
             if not self.charging:
-                logging.debug("Capacity %d, self.sl.Charge \
-                    %d", capacity, conf_charge)
+                logging.debug("Current charge is %d, Level set is %d", 
+                capacity, conf_charge)
                 if capacity <= conf_charge:
                     return (1, capacity)
                 else:
@@ -78,4 +78,4 @@ class Battery(Bpath, Config):
             else:
                 return (0, 0)
         except ZeroDivisionError as e:
-            print e
+            print(e)

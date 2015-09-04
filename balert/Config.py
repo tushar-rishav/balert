@@ -27,7 +27,7 @@ class Config:
     def set_pickle(self, obj):
         try:
             f = open(Config.FILE_PATH, 'wb')
-            os.chmod(Config.FILE_PATH, 0777)
+            os.chmod(Config.FILE_PATH, 0o777)
             pickle.dump(obj, f)
             f.close()
         except Exception as e:
@@ -35,7 +35,7 @@ class Config:
 
     def load_pickle(self):
         if os.path.exists(Config.FILE_PATH):
-            os.chmod(Config.FILE_PATH, 0777)
+            os.chmod(Config.FILE_PATH, 0o777)
             f = open(Config.FILE_PATH, 'r')
             D_C = pickle.load(f)    # USE THIS NOW
             f.close()

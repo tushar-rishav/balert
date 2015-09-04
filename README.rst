@@ -6,11 +6,11 @@ to check desktop notifications. Balert will say it clear and loud
 whenever your battery status goes below a default critical level or the
 level decided by you!
 
-+------------------+-----------+
-| Build Status     | Version   |
-+==================+===========+
-| |Build Status|   | |Version| |
-+------------------+-----------+
++------------------+-----------+-----------+
+| Build Status     | Version   | Downloads |
++==================+===========+===========+
+| |Build Status|   | |Version| | |Downl|   |
++------------------+-----------+-----------+
 
 `Demo`_
 -------
@@ -129,4 +129,7 @@ License
     :target: http://badge.fury.io/py/Balert
 .. |Build Status| image:: https://travis-ci.org/tushar-rishav/balert.svg?branch=master
    :target: https://travis-ci.org/tushar-rishav/balert
+.. |Downl| image:: https://img.shields.io/pypi/dw/Balert.svg
+   :target: https://pypi.python.org/pypi/Balert
+   
 

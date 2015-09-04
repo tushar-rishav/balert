@@ -22,14 +22,14 @@ def setupCron():
             tmp.close()
             subprocess.Popen("crontab /tmp/temp_cron.impossible", shell=True)
             logging.info("Successfully set up the cron job.")
-            print "Ok"  # Do not remove this line ever!
+            print("Ok")  # Do not remove this line ever!
     except:
         logging.debug("Error writing the cron job.")
 
 
 def extract(func):
     def read():
-        cf = Config()    # create config object
+        cf = Config()
         cf_data = cf.load_pickle()
         args = func()
         if args.rate:
@@ -75,7 +75,7 @@ def main():
     al.one_thing()
     battery_instance = Battery()    # READ BATTERY
     charge_info = battery_instance.get_low_battery_warning_level()
-    logging.debug(charge_info)
+    # logging.debug(charge_info)
     if charge_info[0] == 0 and charge_info[1]:
         add_msg = " All cool! %s Percent remaining" % charge_info[1]
     elif charge_info[0] == 1:
