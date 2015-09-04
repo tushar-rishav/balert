@@ -15,7 +15,7 @@ level decided by you!
 `Demo`_
 -------
 
-.. figure:: https://cloud.githubusercontent.com/assets/7397433/9386259/47f4991a-4778-11e5-9aaa-54873acf3d31.gif
+.. figure:: https://cloud.githubusercontent.com/assets/7397433/9695992/263ad662-5386-11e5-9066-e1714fb2aa0b.gif
    :alt: balert
 
    balert
@@ -28,7 +28,7 @@ Build from tar files
 
 .. code:: sh
 
-        wget "https://pypi.python.org/packages/source/B/Balert/Balert-1.0.5.tar.gz"
+        wget "https://pypi.python.org/packages/source/B/Balert/Balert-1.0.7.tar.gz"
         cd balert
         python setup.py install
 
@@ -123,7 +123,7 @@ License
 
    gpl
 
-.. _Demo: https://cloud.githubusercontent.com/assets/7397433/9386259/47f4991a-4778-11e5-9aaa-54873acf3d31.gif
+.. _Demo: https://cloud.githubusercontent.com/assets/7397433/9695992/263ad662-5386-11e5-9066-e1714fb2aa0b.gif
 
 .. |Version|  image:: https://badge.fury.io/py/Balert.svg
     :target: http://badge.fury.io/py/Balert
