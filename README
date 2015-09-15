@@ -121,7 +121,7 @@ License
     :target: http://badge.fury.io/py/Balert
 .. |Build Status| image:: https://travis-ci.org/tushar-rishav/balert.svg?branch=master
    :target: https://travis-ci.org/tushar-rishav/balert
-.. |Downl| image:: https://img.shields.io/pypi/dw/Balert.svg
+.. |Downl| image:: https://img.shields.io/pypi/dd/Balert.svg
    :target: https://pypi.python.org/pypi/Balert
 .. |Py| image:: https://img.shields.io/pypi/pyversions/Balert.svg
    :target: https://pypi.python.org/pypi/Balert
