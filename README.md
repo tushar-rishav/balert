@@ -5,7 +5,7 @@ will say it clear and loud whenever your battery status goes below a default cri
 
 | Build Status | Version | Downloads | Python   |
 | ------------ |---------|-----------|----------|
-| [![Build Status](https://travis-ci.org/tushar-rishav/balert.svg?branch=master)](https://travis-ci.org/tushar-rishav/balert)|[![PyPI version](https://badge.fury.io/py/balert.svg)](http://badge.fury.io/py/balert)| [![PyPi downloads](https://img.shields.io/pypi/dw/Balert.svg)](https://pypi.python.org/pypi/Balert)|[![PyPI](https://img.shields.io/pypi/pyversions/Balert.svg)](https://pypi.python.org/pypi/Balert)
+| [![Build Status](https://travis-ci.org/tushar-rishav/balert.svg?branch=master)](https://travis-ci.org/tushar-rishav/balert)|[![PyPI version](https://badge.fury.io/py/balert.svg)](http://badge.fury.io/py/balert)| [![PyPi downloads](https://img.shields.io/pypi/dd/Balert.svg)](https://pypi.python.org/pypi/Balert)|[![PyPI](https://img.shields.io/pypi/pyversions/Balert.svg)](https://pypi.python.org/pypi/Balert)
 ### [Demo](https://cloud.githubusercontent.com/assets/7397433/9695992/263ad662-5386-11e5-9066-e1714fb2aa0b.gif)
 ![balert](https://cloud.githubusercontent.com/assets/7397433/9695992/263ad662-5386-11e5-9066-e1714fb2aa0b.gif)
 
