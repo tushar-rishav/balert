@@ -15,8 +15,8 @@ will say it clear and loud whenever your battery status goes below a default cri
 ##### Build from tar files
 ```sh
 	wget "https://pypi.python.org/packages/source/B/Balert/Balert-1.0.7.tar.gz"
-	tar xzvf Balert-1.0.4.tar.gz
-	cd Balert-1.0.4
+	tar xzvf Balert-1.0.7.tar.gz
+	cd Balert-1.0.7
 	python setup.py install
 ```
 ##### Using pip
