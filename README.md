@@ -1,6 +1,6 @@
 ## Balert :loudspeaker:
 
-Balert is for all the lazy people (like me :bowtie: ) who don't bother to check desktop notifications. Balert 
+Balert is for all the lazy people (like me :bowtie: ) who often miss desktop notifications. Balert 
 will say it clear and loud whenever your battery status goes below a default critical level or the level decided by you! 
 
 | Build Status | Version | Downloads | Python   |
