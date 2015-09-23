@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Balert by tushar-rishav</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Balert</h1>
+      <h2 class="project-tagline">A utility tool for lazy programmers!</h2>
+      <a href="https://github.com/tushar-rishav/balert" class="btn">View on GitHub</a>
+      <a href="https://github.com/tushar-rishav/balert/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/tushar-rishav/balert/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h2>
+<a id="balert-loudspeaker" class="anchor" href="#balert-loudspeaker" aria-hidden="true"><span class="octicon octicon-link"></span></a>Balert <img class="emoji" title=":loudspeaker:" alt=":loudspeaker:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f4e2.png" height="20" width="20" align="absmiddle">
+</h2>
+
+<p>Balert is for all the lazy people (like me <img class="emoji" title=":bowtie:" alt=":bowtie:" src="https://assets-cdn.github.com/images/icons/emoji/bowtie.png" height="20" width="20" align="absmiddle"> ) who often miss desktop notifications. Balert 
+will say it clear and loud whenever your battery status goes below a default critical level or the level decided by you! </p>
+
+<table>
+<thead>
+<tr>
+<th>Build Status</th>
+<th>Version</th>
+<th>Downloads</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://travis-ci.org/tushar-rishav/balert"><img src="https://travis-ci.org/tushar-rishav/balert.svg?branch=master" alt="Build Status"></a></td>
+<td><a href="http://badge.fury.io/py/balert"><img src="https://badge.fury.io/py/balert.svg" alt="PyPI version"></a></td>
+<td><a href="https://pypi.python.org/pypi/Balert"><img src="https://img.shields.io/pypi/dd/Balert.svg" alt="PyPi downloads"></a></td>
+<td><a href="https://pypi.python.org/pypi/Balert"><img src="https://img.shields.io/pypi/pyversions/Balert.svg" alt="PyPI"></a></td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://cloud.githubusercontent.com/assets/7397433/9695992/263ad662-5386-11e5-9066-e1714fb2aa0b.gif">Demo</a>
+</h3>
+
+<p><img src="https://cloud.githubusercontent.com/assets/7397433/9695992/263ad662-5386-11e5-9066-e1714fb2aa0b.gif" alt="balert"></p>
+
+<h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<h5>
+<a id="build-from-tar-files" class="anchor" href="#build-from-tar-files" aria-hidden="true"><span class="octicon octicon-link"></span></a>Build from tar files</h5>
+
+<div class="highlight highlight-source-shell"><pre>    wget <span class="pl-s"><span class="pl-pds">"</span>https://pypi.python.org/packages/source/B/Balert/Balert-1.0.7.tar.gz<span class="pl-pds">"</span></span>
+    tar xzvf Balert-1.0.7.tar.gz
+    <span class="pl-c1">cd</span> Balert-1.0.7
+    python setup.py install</pre></div>
+
+<h5>
+<a id="using-pip" class="anchor" href="#using-pip" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using pip</h5>
+
+<div class="highlight highlight-source-shell"><pre>    pip install Balert</pre></div>
+
+<p>After installation is done successfully, run any combinations of below command in your terminal once for initial setup and then we are done! If you want to use the default setup then just run  <code>balert</code> in terminal. </p>
+
+<h3>
+<a id="default-config" class="anchor" href="#default-config" aria-hidden="true"><span class="octicon octicon-link"></span></a>Default config:</h3>
+
+<pre><code>language: English
+rate    : 150
+charge  : 20 (in percentage)
+msg     : ""
+vol     : 1.0
+</code></pre>
+
+<h3>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+<h5>
+<a id="set-language" class="anchor" href="#set-language" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set language</h5>
+
+<p>To set the language eg. hindi, english , tamil. Default one is english</p>
+
+<div class="highlight highlight-source-shell"><pre>
+balert -l hindi
+</pre></div>
+
+<h5>
+<a id="set-rate-of-speaking" class="anchor" href="#set-rate-of-speaking" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set rate of speaking</h5>
+
+<div class="highlight highlight-source-shell"><pre>balert -r 100
+</pre></div>
+
+<h5>
+<a id="set-your-custom-alert-message" class="anchor" href="#set-your-custom-alert-message" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set your custom alert message</h5>
+
+<div class="highlight highlight-source-shell"><pre>
+balert -m <span class="pl-s"><span class="pl-pds">"</span>Delta is the state of mind<span class="pl-pds">"</span></span>
+</pre></div>
+
+<h5>
+<a id="set-custom-charge-level" class="anchor" href="#set-custom-charge-level" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set custom charge level.</h5>
+
+<p>If the battery level is below this critical level then it will give voice alert</p>
+
+<div class="highlight highlight-source-shell"><pre>balert -c 30
+</pre></div>
+
+<h5>
+<a id="get-help" class="anchor" href="#get-help" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get help</h5>
+
+<div class="highlight highlight-source-shell"><pre>balert -h</pre></div>
+
+<h5>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h5>
+
+<div class="highlight highlight-source-shell"><pre>balert -m <span class="pl-s"><span class="pl-pds">"</span>Hey,Lazy dog <span class="pl-pds">"</span></span> -c 25</pre></div>
+
+<p>When you run the above code, you've set "Hey,Lazy dog" as your custom message and 25 as your critical charge level.</p>
+
+<h3>
+<a id="contributions" class="anchor" href="#contributions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributions</h3>
+
+<p>Have an idea to make it better? Go ahead! I will be happy to see a pull request from you! <img class="emoji" title=":blush:" alt=":blush:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f60a.png" height="20" width="20" align="absmiddle"></p>
+
+<h3>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h3>
+
+<p><img src="https://cloud.githubusercontent.com/assets/7397433/9025904/67008062-3936-11e5-8803-e5b164a0dfc0.png" alt="gpl"></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/tushar-rishav/balert">Balert</a> is maintained by <a href="https://github.com/tushar-rishav">tushar-rishav</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
