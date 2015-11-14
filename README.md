@@ -19,6 +19,12 @@ will say it clear and loud whenever your battery status goes below a default cri
 	cd Balert-1.0.7
 	python setup.py install
 ```
+##### Build from source
+```sh
+	git clone https://github.com/tushar-rishav/balert.git Balert
+	cd Balert
+	python setup.py install
+```
 ##### Using pip
 ```sh
 	pip install Balert
@@ -31,6 +37,23 @@ After installation is done successfully, run any combinations of below command i
 	charge  : 20 (in percentage)
     msg     : ""
     vol     : 1.0
+
+###Options
+```sh
+usage: balert [-h] [-r RATE] [-v VOL] [-l LANG] [-m MSG] [-c CHARGE]
+
+Listen the voice of your battery whenever she is low!
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -r RATE, --rate RATE  Rate of speaking.(100-200)
+  -v VOL, --vol VOL     Volume of speaking.(1.0)
+  -l LANG, --lang LANG  Language speaking
+  -m MSG, --msg MSG     Alert message of your own
+  -c CHARGE, --charge CHARGE
+                        Decide the critical charge level
+
+```
 
 ### Usage
 
@@ -72,8 +95,6 @@ balert -m "Hey,Lazy dog " -c 25
 ```
 When you run the above code, you've set "Hey,Lazy dog" as your custom message and 25 as your critical charge level.
 
-#### To Do
-- [ ] Write improved tests.
 
 ### Contributions
 Have an idea to make it better? Go ahead! I will be happy to see a pull request from you! :blush:
