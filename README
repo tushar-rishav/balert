@@ -61,7 +61,7 @@ Options
 
 .. code:: sh
 
-    usage: balert [-h] [-r RATE] [-v VOL] [-l LANG] [-m MSG] [-c CHARGE]
+    usage: main.py [-h] [-r RATE] [-v VOL] [-l LANG] [-m MSG] [-c CHARGE] [-s]
 
     Listen the voice of your battery whenever she is low!
 
@@ -73,6 +73,7 @@ Options
       -m MSG, --msg MSG     Alert message of your own
       -c CHARGE, --charge CHARGE
                             Decide the critical charge level
+      -s, --show            Show the currently set config
 
 Usage
 ~~~~~
@@ -112,6 +113,13 @@ voice alert
 
     balert -c 30
 
+View the set configuration
+''''''''''''''''''''''''''
+
+.. code:: sh
+
+    balert -s
+
 Get help
 ''''''''
 
@@ -140,7 +148,6 @@ License
 
 .. figure:: https://cloud.githubusercontent.com/assets/7397433/9025904/67008062-3936-11e5-8803-e5b164a0dfc0.png
    :alt: gpl
-
 
 .. |Build Status| image:: https://travis-ci.org/tushar-rishav/balert.svg?branch=master
    :target: https://travis-ci.org/tushar-rishav/balert

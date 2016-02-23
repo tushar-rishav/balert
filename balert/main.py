@@ -3,9 +3,13 @@ from sys import argv, exit, version_info
 from Voice import Voice
 from BatteryStatus import Battery
 from Config import Config
+from prettytable import PrettyTable
 import argparse
 import logging
 import subprocess
+
+__author__ = 'tushar-rishav'
+__version__ = "0.1.7"
 
 
 def setupCron():
@@ -27,6 +31,13 @@ def setupCron():
         logging.debug("Error writing the cron job.")
 
 
+def pPrint(cf_data):
+    data = PrettyTable(['key', 'value'])
+    for key, val in cf_data.items():
+        data.add_row([key, val])
+    print(data)
+
+
 def extract(func):
     def read():
         cf = Config()
@@ -42,6 +53,8 @@ def extract(func):
             cf_data["MSG"] = args.msg
         if args.charge:
             cf_data["CHARGE"] = args.charge
+        if args.show:
+            pPrint(cf_data)
         cf.set_pickle(cf_data)
         return cf, cf_data
     return read
@@ -62,6 +75,8 @@ def parse():
                         type=str)
     parser.add_argument("-c", "--charge", help="Decide the critical charge\
     level", type=int)
+    parser.add_argument("-s", "--show", help="Show the currently set\
+    config", action="store_true")
     args = parser.parse_args()
     return args
 

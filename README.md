@@ -40,7 +40,7 @@ After installation is done successfully, run any combinations of below command i
 
 ###Options
 ```sh
-usage: balert [-h] [-r RATE] [-v VOL] [-l LANG] [-m MSG] [-c CHARGE]
+usage: main.py [-h] [-r RATE] [-v VOL] [-l LANG] [-m MSG] [-c CHARGE] [-s]
 
 Listen the voice of your battery whenever she is low!
 
@@ -52,6 +52,8 @@ optional arguments:
   -m MSG, --msg MSG     Alert message of your own
   -c CHARGE, --charge CHARGE
                         Decide the critical charge level
+  -s, --show            Show the currently set config
+
 
 ```
 
@@ -85,6 +87,11 @@ If the battery level is below this critical level then it will give voice alert
 balert -c 30
 
 ```
+##### View the set configuration
+```sh
+balert -s
+```
+
 ##### Get help
 ```sh
 balert -h
