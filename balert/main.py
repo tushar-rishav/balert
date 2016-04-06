@@ -9,7 +9,7 @@ import logging
 import subprocess
 
 __author__ = 'tushar-rishav'
-__version__ = "0.1.8"
+__version__ = "1.1.8"
 
 
 def setupCron():
