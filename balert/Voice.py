@@ -1,8 +1,10 @@
 from Config import Config
 import pyttsx
 
+
 class Voice(Config):
-    def __init__(self, rate = 120):
+
+    def __init__(self, rate=120):
         self.engine = pyttsx.init()
         self.rate = rate
         self.engine.setProperty('rate', self.rate)

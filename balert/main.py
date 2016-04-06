@@ -1,5 +1,5 @@
 #! /usr/bin/python
-from sys import argv, exit, version_info
+from sys import argv
 from Voice import Voice
 from BatteryStatus import Battery
 from Config import Config
@@ -9,7 +9,7 @@ import logging
 import subprocess
 
 __author__ = 'tushar-rishav'
-__version__ = "0.1.7"
+__version__ = "0.1.8"
 
 
 def setupCron():
@@ -65,18 +65,33 @@ def parse():
     parser = argparse.ArgumentParser(description=" \
              Listen the voice of your battery whenever she is low!", epilog="\
              Author:tushar.rishav@gmail.com")
-    parser.add_argument("-r", "--rate", help="Rate of speaking.(100-200)",
+    parser.add_argument("-r",
+                        "--rate",
+                        help="Rate of speaking.(100-200)",
                         type=int)
-    parser.add_argument("-v", "--vol", help="Volume of speaking.(1.0)",
+    parser.add_argument("-v",
+                        "--vol",
+                        help="Volume of speaking.(1.0)",
                         type=str)
-    parser.add_argument("-l", "--lang", help="Language speaking",
+    parser.add_argument("-l",
+                        "--lang",
+                        help="Language speaking",
                         type=str)
-    parser.add_argument("-m", "--msg", help="Alert message of your own",
+    parser.add_argument("-m",
+                        "--msg",
+                        help="Alert message of your own",
                         type=str)
-    parser.add_argument("-c", "--charge", help="Decide the critical charge\
-    level", type=int)
-    parser.add_argument("-s", "--show", help="Show the currently set\
-    config", action="store_true")
+    parser.add_argument("-c",
+                        "--charge",
+                        help="Decide the critical charge level",
+                        type=int)
+    parser.add_argument("-s",
+                        "--show",
+                        nargs='?',
+                        const=True,
+                        metavar='BOOL',
+                        default=False,
+                        help="Show the currently set config")
     args = parser.parse_args()
     return args
 

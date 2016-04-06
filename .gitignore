@@ -1,0 +1,15 @@
+__pycache__
+*~
+build
+dist
+*.pyc
+.coverage
+*.patch
+_build
+coverage.xml
+htmlcov
+*.orig
+*.diff
+Balert.egg-info
+.coverage.*
+*.eggs
